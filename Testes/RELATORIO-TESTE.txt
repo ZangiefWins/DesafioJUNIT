@@ -198,3 +198,11 @@ java.lang.AssertionError: expected:<10> but was:<0>
 
 
 Ao modificar o valor da PENA_INOCENCIA, modificou-se erroneamente o retorno quando respostaPrisioneiroA é "Culpado"  e respostaPrisioneiroB é "Inocente", porque deveria-se retornar PENA_CONDENACAO_INDIVIDUAL.
+Correção:
+	1 - Mudar o retorno do caminho de decisão para PENA_CONDENACAO_INDIVIDUAL. (else quando respostaPrisioneiroA é "Culpado")
+
+	 if (respostaPrisioneiroB == "Culpado") {
+            return PENA_CONDENACAO_MUTUA;
+          } else {
+                 return PENA_CONDENACAO_INDIVIDUAL;
+                 }
