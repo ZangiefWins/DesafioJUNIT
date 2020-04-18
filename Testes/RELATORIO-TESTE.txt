@@ -1,0 +1,15 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JulgamentoPrisioneiroTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
+
+RM: 81442
+Nome: Gustavo Alex de Sousa Fernandes
