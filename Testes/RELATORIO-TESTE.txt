@@ -152,3 +152,16 @@ java.lang.AssertionError: expected:<0> but was:<1>
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
 
 Quando os dois prisioneiros são inocentes, deve-se retornar a PENA_INOCENCIA, que vale 0. Porém, retorna-se PENA_CONDENACAO_CUMPLICES, valendo 1.
+Correção:
+	1 - Modificar o retorno do caminho de decisão para PENA_INOCENCIA (else quando respostaPrisioneiroB for "Culpado").
+	2 - Modificar o valor de PENA_INOCENCIA para 0.
+	
+	if (respostaPrisioneiroB == "Culpado") {
+                    return PENA_CONDENACAO_CUMPLICES;
+                } else {
+                         return PENA_INOCENCIA;
+                        }
+                }
+
+	private int PENA_INOCENCIA = 0;
+	
